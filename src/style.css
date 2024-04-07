@@ -12,7 +12,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(113, 111, 116, 0.08);
 }
-
 .search-value {
   background-color: white;
   border: none;
@@ -43,23 +42,34 @@ body {
   font-weight: lighter;
   color: rgb(114, 172, 197);
 }
-.current-date {
+.current-date-container {
   margin: 20px 40px;
   font-size: 20px;
   font-weight: lighter;
 }
-.now {
+.current-weather-container {
+  display: flex;
   font-size: 100px;
-  font-weight: 5;
-  margin-left: 65px;
+  margin-left: 70px;
   color: rgb(114, 172, 197);
 }
-.current-emoji {
-  font-family: "Noto Color Emoji", sans-serif;
-  margin-right: 100px;
+.current-temperature {
+  margin-left: 200px;
+  font-weight: lighter;
 }
-#current-info {
-  margin: 65px 65px 30px 65px;
+.celsium {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 70px;
+}
+.current-emoji {
+  margin-right: 40px;
+}
+
+.current-info-container {
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 50px;
 }
 .emoji {
   font-family: "Noto Emoji", sans-serif;
@@ -67,7 +77,8 @@ body {
 }
 
 footer {
-  margin: 20px 40px 20px 40px;
+  margin: 20px;
+  padding-top: 20px;
   border-top: solid 1.5px rgba(40, 40, 41, 0.4);
   text-align: center;
   font-size: 14px;

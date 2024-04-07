@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,12 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Dancing+Script:wght@400..700&family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="weather-app">
@@ -38,19 +34,20 @@
         </form>
       </header>
       <main>
-        <div class="current-city">Byron Bay</div>
-        <div class="current-date">
-          <span>Friday</span>
-          <span>13:45</span>
+        <div class="current-city"></div>
+        <div class="current-date-container">
+          <span class="current-date">Friday 13:45</span>
         </div>
-        <div class="now">
-          <span class="current-emoji">🌧</span
-          ><span class="current-temperature">27°C</span>
+        <div class="current-weather-container">
+          <span class="current-emoji"></span
+          ><span class="current-temperature"></span>
+          <span class="celsium">°C</span>
         </div>
-        <div id="current-info">
-          <span class="emoji">💨</span> <span id="wind-speed">2.06km/h</span>
-          <span class="emoji">💧</span> <span id="humidity"> 85%</span>
-          <span class="emoji">☂️</span> <span id="condition">rain</span>
+        <div class="current-info-container">
+          <span class="emoji">💨</span> <span id="wind-speed"></span>
+          <span class="emoji">💧</span> <span id="humidity">66%</span>
+          <span class="emoji">☂️</span>
+          <span id="description">rainy condition</span>
         </div>
       </main>
       <footer>
