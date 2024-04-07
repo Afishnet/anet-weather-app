@@ -13,7 +13,7 @@ body {
   box-shadow: 0 30px 50px rgba(113, 111, 116, 0.08);
 }
 .search-value {
-  background-color: white;
+  background-color: transparent;
   border: none;
   border-bottom: solid 1.5px rgba(40, 40, 41, 0.4);
   color: rgba(40, 40, 41, 0.4);
@@ -28,7 +28,7 @@ body {
 }
 .search-button {
   font-family: "Noto Emoji", sans-serif;
-  background-color: white;
+  background-color: transparent;
   color: rgba(40, 40, 41, 0.4);
   margin-left: 5px;
   padding: 15px;
