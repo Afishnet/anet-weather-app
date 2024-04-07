@@ -52,6 +52,7 @@ body {
   font-size: 100px;
   margin-left: 70px;
   color: rgb(114, 172, 197);
+  max-width: 600px;
 }
 .current-temperature {
   margin-left: 200px;
