@@ -71,6 +71,7 @@ body {
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 50px;
+  font-size: 17px;
 }
 .emoji {
   font-family: "Noto Emoji", sans-serif;
@@ -78,13 +79,45 @@ body {
 }
 
 footer {
-  margin: 20px;
   padding-top: 20px;
-  border-top: solid 1.5px rgba(40, 40, 41, 0.4);
+  border-top: solid 1.5px rgba(40, 40, 41, 0.1);
   text-align: center;
   font-size: 14px;
   color: rgba(40, 40, 41, 0.6);
+  margin-left: 40px;
+  margin-right: 40px;
 }
 a {
   color: rgb(92, 151, 176);
+}
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 40px 20px 40px;
+  border-top: solid 1.5px rgba(40, 40, 41, 0.1);
+}
+.weather-forecast-day {
+  padding: 15px 25px 15px 25px;
+  background-color: rgba(170, 226, 240, 0.15);
+
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+.weather-forecast-icon {
+  font-size: 35px;
+  margin-top: 10px;
+}
+.weather-forecast-temperatures {
+  margin-top: 10px;
+}
+.weather-forecast-temperature-max {
+  margin-right: 2px;
+  font-weight: 600;
 }
