@@ -60,31 +60,41 @@ function formatDay(timestamp) {
 
   return days[date.getDay()];
 }
-
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", handleSearchSubmit);
-
-searchCity("Noosa");
-function displayForecast() {
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+function getForecast(city) {
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
     <span class="weather-forecast-day">
-        <div class="weather-forecast-date">${day}</div>
-        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-date">${formatDay(day.time)}</div>
+        <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max">15º</span>
-          <span class="weather-forecast-temperature-min">9º</span>
+          <span class="weather-forecast-temperature-max">${Math.round(
+            day.temperature.maximum
+          )}º</span>
+          <span class="weather-forecast-temperature-min">${Math.round(
+            day.temperature.minimum
+          )}º</span>
         </div>
         </span>
         `;
+    }
   });
 
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHtml;
 }
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Noosa");
 displayForecast();
